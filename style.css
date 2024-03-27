@@ -1,0 +1,11 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 850px;
+}
+
+.paintArea {
+    height: 49px;
+    width: 49px;
+    border: solid 1px;
+}
