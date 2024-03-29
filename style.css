@@ -1,8 +1,29 @@
+body {
+    background-color: darkslategrey;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 10px;
+}
+
+.content img {
+    width: 100%;
+    height: auto;
+}
+
+.imgParent {
+    max-width: 320px;
+}
+
 .grid {
     display: flex;
     flex-wrap: wrap;
     width: 640px;
     border: solid 1px;
+    background-color: white;
 }
 
 .red {
@@ -13,6 +34,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 }
 
 .button {
