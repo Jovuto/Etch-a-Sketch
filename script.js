@@ -14,6 +14,20 @@ RESET_BUTTON.addEventListener("click", () => {
 })
 
 createGrid(16);
+GRID_AREA.addEventListener("mousedown", () =>{
+    GRID_AREA.addEventListener("mouseover", colorSquare);
+})
+
+GRID_AREA.addEventListener("mouseup", () => {
+    GRID_AREA.removeEventListener("mouseover", colorSquare);
+})
+
+function colorSquare(e){
+    e.stopPropagation();
+    if (e.target != GRID_AREA){
+        e.target.classList.add("red");
+    }
+}
 
 function createGrid(gridSize) {
     const PAINT_AREA_SIZE = findGridSize(gridSize);
@@ -25,9 +39,6 @@ function createGrid(gridSize) {
         PAINT_AREA.style.height = `${PAINT_AREA_SIZE}px`
         GRID_AREA.appendChild(PAINT_AREA);
         PAINT_AREA.classList.add("paintArea");
-        PAINT_AREA.addEventListener("mouseover", (e) => {
-            e.target.classList.add("red");
-        })
     }
 }
 
