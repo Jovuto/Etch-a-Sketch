@@ -1,5 +1,14 @@
 const GRID_AREA = document.querySelector(".grid");
 const RESET_BUTTON = document.querySelector("button");
+const HEADER_AREA = document.querySelector(".header");
+const BLACK_BUTTON = document.querySelector(".blackButton");
+const WHITE_BUTTON = document.querySelector(".whiteButton");
+const GREY_BUTTON = document.querySelector(".greyButton");
+const BEIGE_BUTTON = document.querySelector(".beigeButton");
+const PINK_BUTTON = document.querySelector(".pinkButton");
+const RED_BUTTON = document.querySelector(".redButton");
+
+let paintColor;
 
 RESET_BUTTON.addEventListener("click", () => {
     let resetMessage = prompt("How big would you like the grid to be? No bigger than 100x100");
@@ -11,6 +20,15 @@ RESET_BUTTON.addEventListener("click", () => {
         gridClear();
         createGrid(resetMessage);
     }
+})
+
+HEADER_AREA.addEventListener("click", (e) => {
+    if (e.target == BLACK_BUTTON) paintColor = "blackButton";
+    else if (e.target == WHITE_BUTTON) paintColor = "whiteButton";
+    else if (e.target == GREY_BUTTON) paintColor = "greyButton";
+    else if (e.target == BEIGE_BUTTON) paintColor = "beigeButton";
+    else if (e.target == PINK_BUTTON) paintColor = "pinkButton";
+    else if (e.target == RED_BUTTON) paintColor = "redButton";
 })
 
 createGrid(16);
@@ -25,7 +43,8 @@ GRID_AREA.addEventListener("mouseup", () => {
 function colorSquare(e){
     e.stopPropagation();
     if (e.target != GRID_AREA){
-        e.target.classList.add("red");
+        e.target.classList.remove("blackButton", "whiteButton", "greyButton", "beigeButton", "pinkButton", "redButton");
+        e.target.classList.add(paintColor);
     }
 }
 

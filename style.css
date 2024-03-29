@@ -14,3 +14,29 @@
     align-items: center;
     justify-content: center;
 }
+
+.button {
+    height: 50px;
+    width:  50px;
+    border: solid 1px;
+}
+
+.blackButton {
+    background-color: black;
+}
+
+.greyButton {
+    background-color: grey;
+}
+
+.beigeButton {
+    background-color: beige;
+}
+
+.pinkButton {
+    background-color: pink;
+}
+
+.redButton {
+    background-color: red;
+}
