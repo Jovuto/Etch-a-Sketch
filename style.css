@@ -1,15 +1,16 @@
 .grid {
     display: flex;
     flex-wrap: wrap;
-    width: 802px;
-}
-
-.paintArea {
-    height: 49px;
-    width: 49px;
+    width: 640px;
     border: solid 1px;
 }
 
 .red {
     background-color: red;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
