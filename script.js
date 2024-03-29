@@ -12,7 +12,6 @@ let paintColor;
 
 RESET_BUTTON.addEventListener("click", () => {
     let resetMessage = prompt("How big would you like the grid to be? No bigger than 100x100");
-    console.log(+resetMessage);
     if ((resetMessage > 100) || isNaN(resetMessage) || (resetMessage <= 0)) {
     alert("Either your number was above 100, 0 or below, or not a number. Try again.")
     }
